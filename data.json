@@ -1,32 +1,100 @@
-{
-    "1": {
-        "id": "001",
-        "tajemnica": "Narodzenie Jezusa",
-        "rozwazanie": "Maryja rodzi Syna Bożego w Betlejem...",
-        "autor": {
-            "imie": "Adam Nowak",
-            "bio": "Adam Nowak jest znanym teologiem...",
-            "link": "https://przykladowy-link.com/adam"
-        }
+[
+    {
+        "id": 1,
+        "day": 1,
+        "title": "Konanie w Ogrójcu",
+        "content": "Jezus modli się w Ogrójcu, wypełniając wolę Ojca...",
+        "author": "Jan Kowalski",
+        "links": [
+            "https://example.com/autor-kowalski",
+            "https://example.com/rozwazanie-1"
+        ]
     },
-    "2": {
-        "id": "002",
-        "tajemnica": "Chrzest Jezusa",
-        "rozwazanie": "Jezus przyjmuje chrzest w Jordanie...",
-        "autor": {
-            "imie": "Ewa Kowalska",
-            "bio": "Ewa Kowalska pisze o duchowości...",
-            "link": "https://przykladowy-link.com/ewa"
-        }
+    {
+        "id": 2,
+        "day": 2,
+        "title": "Biczowanie Jezusa",
+        "content": "Jezus cierpi biczowanie, aby odkupić nasze grzechy...",
+        "author": "Jan Kowalski",
+        "links": [
+            "https://example.com/rozwazanie-2"
+        ]
     },
-    "3": {
-        "id": "003",
-        "tajemnica": "Przemienienie na górze Tabor",
-        "rozwazanie": "Jezus objawia swoją chwałę uczniom...",
-        "autor": {
-            "imie": "Krzysztof Wiśniewski",
-            "bio": "Krzysztof Wiśniewski to autor wielu książek...",
-            "link": "https://przykladowy-link.com/krzysztof"
-        }
+    {
+        "id": 3,
+        "day": 3,
+        "title": "Cierniem ukoronowanie",
+        "content": "Jezus przyjmuje koronę cierniową...",
+        "author": "Anna Nowak",
+        "links": [
+            "https://example.com/autor-nowak",
+            "https://example.com/rozwazanie-3"
+        ]
+    },
+    {
+        "id": 4,
+        "day": 4,
+        "title": "Dźwiganie Krzyża",
+        "content": "Jezus niesie krzyż na Golgotę...",
+        "author": "Anna Nowak",
+        "links": []
+    },
+    {
+        "id": 5,
+        "day": 5,
+        "title": "Ukrzyżowanie",
+        "content": "Jezus umiera na krzyżu dla naszego zbawienia...",
+        "author": "Paweł Zieliński",
+        "links": [
+            "https://example.com/rozwazanie-5"
+        ]
+    },
+    {
+        "id": 6,
+        "day": 6,
+        "title": "Zmartwychwstanie",
+        "content": "Jezus powstaje z martwych, pokonując śmierć...",
+        "author": "Paweł Zieliński",
+        "links": [
+            "https://example.com/rozwazanie-6",
+            "https://example.com/zmartwychwstanie"
+        ]
+    },
+    {
+        "id": 7,
+        "day": 7,
+        "title": "Wniebowstąpienie",
+        "content": "Jezus wstępuje do nieba i zasiada po prawicy Ojca...",
+        "author": "Karol Wiśniewski",
+        "links": []
+    },
+    {
+        "id": 8,
+        "day": 8,
+        "title": "Zesłanie Ducha Świętego",
+        "content": "Duch Święty zstępuje na Apostołów...",
+        "author": "Karol Wiśniewski",
+        "links": [
+            "https://example.com/rozwazanie-8"
+        ]
+    },
+    {
+        "id": 9,
+        "day": 9,
+        "title": "Wniebowzięcie Maryi",
+        "content": "Maryja zostaje wzięta do nieba...",
+        "author": "Ewa Lis",
+        "links": [
+            "https://example.com/rozwazanie-9",
+            "https://example.com/maryja-wniebowzieta"
+        ]
+    },
+    {
+        "id": 10,
+        "day": 10,
+        "title": "Ukoronowanie Maryi",
+        "content": "Maryja zostaje Królową Nieba i Ziemi...",
+        "author": "Ewa Lis",
+        "links": []
     }
-}
+]
