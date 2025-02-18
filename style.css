@@ -3,3 +3,22 @@ body {
     text-align: center;
     margin: 20px;
 }
+
+#days {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.day {
+    padding: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+    min-width: 80px;
+}
+
+.today {
+    background-color: yellow;
+    font-weight: bold;
+}
