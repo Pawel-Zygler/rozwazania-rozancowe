@@ -1,11 +1,32 @@
 {
-    "wtorek": {
-        "tajemnica": "Konanie w Ogrójcu",
-        "rozwazanie": "Jezus modli się w Ogrójcu, wypełniając wolę Ojca...",
+    "1": {
+        "id": "001",
+        "tajemnica": "Narodzenie Jezusa",
+        "rozwazanie": "Maryja rodzi Syna Bożego w Betlejem...",
         "autor": {
-            "imie": "Jan Kowalski",
-            "bio": "Jan Kowalski to autor duchowych rozważań...",
-            "link": "https://przykladowy-link.com"
+            "imie": "Adam Nowak",
+            "bio": "Adam Nowak jest znanym teologiem...",
+            "link": "https://przykladowy-link.com/adam"
+        }
+    },
+    "2": {
+        "id": "002",
+        "tajemnica": "Chrzest Jezusa",
+        "rozwazanie": "Jezus przyjmuje chrzest w Jordanie...",
+        "autor": {
+            "imie": "Ewa Kowalska",
+            "bio": "Ewa Kowalska pisze o duchowości...",
+            "link": "https://przykladowy-link.com/ewa"
+        }
+    },
+    "3": {
+        "id": "003",
+        "tajemnica": "Przemienienie na górze Tabor",
+        "rozwazanie": "Jezus objawia swoją chwałę uczniom...",
+        "autor": {
+            "imie": "Krzysztof Wiśniewski",
+            "bio": "Krzysztof Wiśniewski to autor wielu książek...",
+            "link": "https://przykladowy-link.com/krzysztof"
         }
     }
 }
