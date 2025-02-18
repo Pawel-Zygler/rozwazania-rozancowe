@@ -28,20 +28,30 @@ function loadReflection(day) {
     fetch("data.json")
         .then(response => response.json())
         .then(data => {
-            if (data[day]) {
-                document.getElementById("reflection").innerHTML = `
-                    <h2>${data[day].tajemnica}</h2>
-                    <p>${data[day].rozwazanie}</p>
-                `;
+            let reflection = data.find(item => item.day === day);
+            if (reflection) {
+                document.getElementById("reflection-title").innerText = reflection.title;
+                document.getElementById("reflection-content").innerText = reflection.content;
+                document.getElementById("reflection-author").innerText = "Autor: " + reflection.author;
 
-                document.getElementById("author").innerHTML = `
-                    <h3>Autor: ${data[day].autor.imie}</h3>
-                    <p>${data[day].autor.bio}</p>
-                    <a href="${data[day].autor.link}" target="_blank">Więcej</a>
-                `;
+                let linksContainer = document.getElementById("reflection-links");
+                linksContainer.innerHTML = "";
+                if (reflection.links.length > 0) {
+                    reflection.links.forEach(link => {
+                        let a = document.createElement("a");
+                        a.href = link;
+                        a.innerText = "Zobacz więcej";
+                        a.target = "_blank";
+                        a.style.display = "block";
+                        linksContainer.appendChild(a);
+                    });
+                }
             } else {
-                document.getElementById("reflection").innerHTML = "<p>Brak rozważania na ten dzień.</p>";
-                document.getElementById("author").innerHTML = "";
+                document.getElementById("reflection-title").innerText = "Brak rozważania na ten dzień.";
+                document.getElementById("reflection-content").innerText = "";
+                document.getElementById("reflection-author").innerText = "";
+                document.getElementById("reflection-links").innerHTML = "";
             }
-        });
+        })
+        .catch(error => console.error("Błąd ładowania JSON:", error));
 }
