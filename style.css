@@ -4,18 +4,19 @@ body {
     margin: 20px;
 }
 
-#days {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
+table {
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+    border-collapse: collapse;
 }
 
-.day {
-    padding: 10px;
+td {
+    width: 14%;
+    height: 50px;
     border: 1px solid black;
+    text-align: center;
     cursor: pointer;
-    min-width: 80px;
 }
 
 .today {
