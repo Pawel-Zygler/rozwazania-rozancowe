@@ -1,45 +1,47 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const dniTygodnia = ["niedziela", "poniedziałek", "wtorek", "środa", "czwartek", "piątek", "sobota"];
-    const dzisiaj = new Date().getDay();
+    const today = new Date();
+    const currentDay = today.getDate();
+    const daysInMonth = new Date(today.getFullYear(), today.getMonth() + 1, 0).getDate();
     
-    const daysContainer = document.getElementById("days");
+    const calendarTable = document.getElementById("calendarTable");
+    let row = document.createElement("tr");
 
-    dniTygodnia.forEach((dzien, index) => {
-        const dayElement = document.createElement("div");
-        dayElement.classList.add("day");
-        dayElement.textContent = dzien;
+    for (let i = 1; i <= daysInMonth; i++) {
+        let cell = document.createElement("td");
+        cell.textContent = i;
         
-        if (index === dzisiaj) {
-            dayElement.classList.add("today");
+        if (i === currentDay) {
+            cell.classList.add("today");
         }
 
-        dayElement.addEventListener("click", () => loadReflection(dzien));
-        daysContainer.appendChild(dayElement);
-    });
+        cell.addEventListener("click", () => loadReflection(i));
+        row.appendChild(cell);
 
-    fetch("data.json")
-        .then(response => response.json())
-        .then(data => {
-            loadReflection(dniTygodnia[dzisiaj], data);
-        })
-        .catch(error => console.error("Błąd wczytywania danych:", error));
+        if (i % 7 === 0 || i === daysInMonth) {
+            calendarTable.appendChild(row);
+            row = document.createElement("tr");
+        }
+    }
 });
 
-function loadReflection(dzien, data) {
+function loadReflection(day) {
     fetch("data.json")
         .then(response => response.json())
         .then(data => {
-            if (data[dzien]) {
+            if (data[day]) {
                 document.getElementById("reflection").innerHTML = `
-                    <h2>${data[dzien].tajemnica}</h2>
-                    <p>${data[dzien].rozwazanie}</p>
+                    <h2>${data[day].tajemnica}</h2>
+                    <p>${data[day].rozwazanie}</p>
                 `;
 
                 document.getElementById("author").innerHTML = `
-                    <h3>Autor: ${data[dzien].autor.imie}</h3>
-                    <p>${data[dzien].autor.bio}</p>
-                    <a href="${data[dzien].autor.link}" target="_blank">Więcej</a>
+                    <h3>Autor: ${data[day].autor.imie}</h3>
+                    <p>${data[day].autor.bio}</p>
+                    <a href="${data[day].autor.link}" target="_blank">Więcej</a>
                 `;
+            } else {
+                document.getElementById("reflection").innerHTML = "<p>Brak rozważania na ten dzień.</p>";
+                document.getElementById("author").innerHTML = "";
             }
         });
 }
