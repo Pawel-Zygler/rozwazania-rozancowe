@@ -1,33 +1,52 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const calendar = document.getElementById("calendar");
-    
-    if (!calendar) {
-        console.error("Błąd: Nie znaleziono elementu #calendar.");
+    const calendarElement = document.getElementById("calendar");
+    const reflectionContent = document.getElementById("reflection-content");
+    const authorElement = document.getElementById("author");
+    const bioElement = document.getElementById("bio");
+    const linkElement = document.getElementById("link");
+
+    if (!calendarElement) {
+        console.error("Błąd: Brak elementu #calendar w HTML!");
         return;
     }
 
-    generateCalendar(calendar);
-});
+    const reflections = {
+        1: { title: "Tajemnica 1", text: "Opis tajemnicy 1", author: "Jan Kowalski", bio: "Autor duchowych rozważań", link: "https://example.com/1" },
+        2: { title: "Tajemnica 2", text: "Opis tajemnicy 2", author: "Maria Nowak", bio: "Pisarz duchowy", link: "https://example.com/2" },
+        3: { title: "Tajemnica 3", text: "Opis tajemnicy 3", author: "Ks. Piotr", bio: "Duchowny", link: "https://example.com/3" }
+    };
 
-function generateCalendar(calendar) {
-    for (let i = 1; i <= 30; i++) {
-        let day = document.createElement("div");
-        day.classList.add("day");
-        day.innerText = i;
-        day.onclick = () => loadReflection(i);
-        calendar.appendChild(day);
+    function generateCalendar() {
+        calendarElement.innerHTML = "";
+        for (let i = 1; i <= 31; i++) {
+            let dayElement = document.createElement("div");
+            dayElement.classList.add("day");
+            dayElement.textContent = i;
+
+            dayElement.addEventListener("click", function () {
+                document.querySelectorAll(".day").forEach(el => el.classList.remove("selected"));
+                dayElement.classList.add("selected");
+                loadReflection(i);
+            });
+
+            calendarElement.appendChild(dayElement);
+        }
     }
-}
 
-function loadReflection(day) {
-    fetch("data.json")
-        .then(response => response.json())
-        .then(data => {
-            const reflection = data.find(item => item.id === day);
-            document.getElementById("reflection-content").innerText = reflection ? reflection.title : "Brak rozważania.";
-            document.getElementById("author").innerText = reflection ? reflection.author.name : "";
-            document.getElementById("bio").innerText = reflection ? reflection.author.bio : "";
-            document.getElementById("link").href = reflection ? reflection.author.link : "#";
-        })
-        .catch(error => console.error("Błąd ładowania JSON:", error));
-}
+    function loadReflection(day) {
+        if (reflections[day]) {
+            reflectionContent.innerText = reflections[day].title + ": " + reflections[day].text;
+            authorElement.innerText = reflections[day].author;
+            bioElement.innerText = reflections[day].bio;
+            linkElement.href = reflections[day].link;
+            linkElement.style.display = "inline";
+        } else {
+            reflectionContent.innerText = "Brak rozważania na ten dzień.";
+            authorElement.innerText = "";
+            bioElement.innerText = "";
+            linkElement.style.display = "none";
+        }
+    }
+
+    generateCalendar();
+});
