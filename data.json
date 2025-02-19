@@ -1,100 +1,102 @@
 [
     {
         "id": 1,
-        "day": 1,
-        "title": "Konanie w Ogrójcu",
-        "content": "Jezus modli się w Ogrójcu, wypełniając wolę Ojca...",
-        "author": "Jan Kowalski",
-        "links": [
-            "https://example.com/autor-kowalski",
-            "https://example.com/rozwazanie-1"
-        ]
+        "title": "Tajemnica Zwiastowania",
+        "content": "Anioł Gabriel zwiastuje Maryi...",
+        "author": {
+            "name": "Jan Kowalski",
+            "bio": "Jan Kowalski to autor duchowych rozważań...",
+            "link": "https://example.com/jan-kowalski"
+        }
     },
     {
         "id": 2,
-        "day": 2,
-        "title": "Biczowanie Jezusa",
-        "content": "Jezus cierpi biczowanie, aby odkupić nasze grzechy...",
-        "author": "Jan Kowalski",
-        "links": [
-            "https://example.com/rozwazanie-2"
-        ]
+        "title": "Tajemnica Nawiedzenia",
+        "content": "Maryja odwiedza Elżbietę...",
+        "author": {
+            "name": "Anna Nowak",
+            "bio": "Anna Nowak pisze o duchowości...",
+            "link": "https://example.com/anna-nowak"
+        }
     },
     {
         "id": 3,
-        "day": 3,
-        "title": "Cierniem ukoronowanie",
-        "content": "Jezus przyjmuje koronę cierniową...",
-        "author": "Anna Nowak",
-        "links": [
-            "https://example.com/autor-nowak",
-            "https://example.com/rozwazanie-3"
-        ]
+        "title": "Tajemnica Narodzenia",
+        "content": "Jezus rodzi się w Betlejem...",
+        "author": {
+            "name": "Piotr Wiśniewski",
+            "bio": "Piotr Wiśniewski - kaznodzieja...",
+            "link": "https://example.com/piotr-wisniewski"
+        }
     },
     {
         "id": 4,
-        "day": 4,
-        "title": "Dźwiganie Krzyża",
-        "content": "Jezus niesie krzyż na Golgotę...",
-        "author": "Anna Nowak",
-        "links": []
+        "title": "Tajemnica Ofiarowania",
+        "content": "Maryja i Józef przynoszą Jezusa do świątyni...",
+        "author": {
+            "name": "Maria Kaczmarek",
+            "bio": "Maria Kaczmarek - autorka książek o wierze...",
+            "link": "https://example.com/maria-kaczmarek"
+        }
     },
     {
         "id": 5,
-        "day": 5,
-        "title": "Ukrzyżowanie",
-        "content": "Jezus umiera na krzyżu dla naszego zbawienia...",
-        "author": "Paweł Zieliński",
-        "links": [
-            "https://example.com/rozwazanie-5"
-        ]
+        "title": "Tajemnica Znalezienia",
+        "content": "Jezus zostaje odnaleziony w świątyni...",
+        "author": {
+            "name": "Tomasz Lis",
+            "bio": "Tomasz Lis - teolog i pisarz...",
+            "link": "https://example.com/tomasz-lis"
+        }
     },
     {
         "id": 6,
-        "day": 6,
-        "title": "Zmartwychwstanie",
-        "content": "Jezus powstaje z martwych, pokonując śmierć...",
-        "author": "Paweł Zieliński",
-        "links": [
-            "https://example.com/rozwazanie-6",
-            "https://example.com/zmartwychwstanie"
-        ]
+        "title": "Tajemnica Chrztu w Jordanie",
+        "content": "Jezus przyjmuje chrzest od Jana Chrzciciela...",
+        "author": {
+            "name": "Ewa Nowicka",
+            "bio": "Ewa Nowicka - autorka refleksji biblijnych...",
+            "link": "https://example.com/ewa-nowicka"
+        }
     },
     {
         "id": 7,
-        "day": 7,
-        "title": "Wniebowstąpienie",
-        "content": "Jezus wstępuje do nieba i zasiada po prawicy Ojca...",
-        "author": "Karol Wiśniewski",
-        "links": []
+        "title": "Tajemnica Wesela w Kanie",
+        "content": "Jezus dokonuje pierwszego cudu...",
+        "author": {
+            "name": "Michał Baran",
+            "bio": "Michał Baran - kaznodzieja i rekolekcjonista...",
+            "link": "https://example.com/michal-baran"
+        }
     },
     {
         "id": 8,
-        "day": 8,
-        "title": "Zesłanie Ducha Świętego",
-        "content": "Duch Święty zstępuje na Apostołów...",
-        "author": "Karol Wiśniewski",
-        "links": [
-            "https://example.com/rozwazanie-8"
-        ]
+        "title": "Tajemnica Głoszenia Królestwa",
+        "content": "Jezus naucza o Królestwie Bożym...",
+        "author": {
+            "name": "Barbara Leśniak",
+            "bio": "Barbara Leśniak - pisarka duchowa...",
+            "link": "https://example.com/barbara-lesniak"
+        }
     },
     {
         "id": 9,
-        "day": 9,
-        "title": "Wniebowzięcie Maryi",
-        "content": "Maryja zostaje wzięta do nieba...",
-        "author": "Ewa Lis",
-        "links": [
-            "https://example.com/rozwazanie-9",
-            "https://example.com/maryja-wniebowzieta"
-        ]
+        "title": "Tajemnica Przemienienia",
+        "content": "Jezus przemienia się na górze Tabor...",
+        "author": {
+            "name": "Andrzej Górski",
+            "bio": "Andrzej Górski - rekolekcjonista...",
+            "link": "https://example.com/andrzej-gorski"
+        }
     },
     {
         "id": 10,
-        "day": 10,
-        "title": "Ukoronowanie Maryi",
-        "content": "Maryja zostaje Królową Nieba i Ziemi...",
-        "author": "Ewa Lis",
-        "links": []
+        "title": "Tajemnica Ustanowienia Eucharystii",
+        "content": "Jezus ustanawia Eucharystię podczas Ostatniej Wieczerzy...",
+        "author": {
+            "name": "Zofia Malinowska",
+            "bio": "Zofia Malinowska - autorka duchowych esejów...",
+            "link": "https://example.com/zofia-malinowska"
+        }
     }
 ]
