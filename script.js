@@ -10,11 +10,23 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
     }
 
-    const reflections = {
-        1: { title: "Tajemnica 1", text: "Opis tajemnicy 1", author: "Jan Kowalski", bio: "Autor duchowych rozważań", link: "https://example.com/1" },
-        2: { title: "Tajemnica 2", text: "Opis tajemnicy 2", author: "Maria Nowak", bio: "Pisarz duchowy", link: "https://example.com/2" },
-        3: { title: "Tajemnica 3", text: "Opis tajemnicy 3", author: "Ks. Piotr", bio: "Duchowny", link: "https://example.com/3" }
-    };
+    let reflections = {}; // Tu będą przechowywane dane z JSON
+
+    // Funkcja do pobrania danych z JSON
+    function loadReflections() {
+        fetch("data.json")
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Błąd ładowania danych");
+                }
+                return response.json();
+            })
+            .then(data => {
+                reflections = data;
+                generateCalendar(); // Po załadowaniu danych generujemy kalendarz
+            })
+            .catch(error => console.error("Błąd: ", error));
+    }
 
     function generateCalendar() {
         calendarElement.innerHTML = "";
@@ -48,5 +60,5 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    generateCalendar();
+    loadReflections(); // Na start ładuje dane z JSON
 });
