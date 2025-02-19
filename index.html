@@ -4,19 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rozważania Różańcowe</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .calendar { display: grid; grid-template-columns: repeat(7, 40px); gap: 5px; justify-content: center; }
+        .day { border: 1px solid black; padding: 10px; cursor: pointer; }
+        .selected { background-color: yellow; }
+    </style>
 </head>
 <body>
     <h1>Rozważania Różańcowe</h1>
-    
-    <div id="calendar">
-        <h2>Kalendarz</h2>
-        <table id="calendarTable"></table>
-    </div>
-
-    <div id="reflection"></div>
-    <div id="author"></div>
-    <div id="reflection-links"></div>
+    <h2>Kalendarz</h2>
+    <div class="calendar" id="calendar"></div>
+    <h2>Rozważanie na dziś</h2>
+    <div id="reflection-content">Wybierz dzień</div>
+    <h3>Autor: <span id="author"></span></h3>
+    <p id="bio"></p>
+    <a id="link" href="#" target="_blank">Więcej</a>
 
     <script src="script.js"></script>
 </body>
