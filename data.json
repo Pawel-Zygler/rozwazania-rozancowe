@@ -1,102 +1,32 @@
-[
-    {
+{
+    "1": {
         "id": 1,
-        "title": "Tajemnica Radosna: Zwiastowanie Najświętszej Maryji Pannie",
-        "content": "Zwiastowanie – Nie bój się! Czy to widok Anioła, czy też wiadomość, którą Ci przekazał, sprawiły, że po prostu się bałaś, Maryjo? Anioł musiał Cię uspokoić. Ja też się boję różnych sytuacji. Boję się nawet tego, by Chrystus tak naprawdę, zajął najważniejsze miejsce w moim życiu. Ale spróbuję, tak jak Ty, Matko! Niech mi się stanie według Twego słowa!",
+        "title": "Tajemnica Radosna: Zwiastowanie Najświętszej Maryi Pannie",
+        "content": "Zwiastowanie – Nie bój się! Czy to widok Anioła, czy też wiadomość, którą Ci przekazał, sprawiły, że po prostu się bałaś, Maryjo? Anioł musiał Cię uspokoić. Ja też się boję różnych sytuacji. Boję się nawet tego, by Chrystus tak naprawdę zajął najważniejsze miejsce w moim życiu. Ale spróbuję, tak jak Ty, Matko! Niech mi się stanie według Twego słowa!",
         "author": {
             "name": "brak",
             "bio": "https://www.slowo.redemptor.pl",
             "link": "https://www.slowo.redemptor.pl/pl/4660/8644/idzcie-i-gloscie-z-maryja-podejmuje-powolanie-do-gloszenia-chrystusowej-ewangelii-%E2%80%93-rozwazania-rozancowe.html"
         }
     },
-    {
+    "2": {
         "id": 2,
-        "title": "Tajemnica Nawiedzenia",
-        "content": "Maryja odwiedza Elżbietę...",
+        "title": "Tajemnica Bolesna: Modlitwa Pana Jezusa w Ogrójcu",
+        "content": "Jezus przeżywa trwogę konania, ale modli się: 'Ojcze, jeśli chcesz, oddal ode Mnie ten kielich, lecz nie moja, ale Twoja wola niech się stanie'. Czy w trudnościach potrafię powierzyć się Bogu?",
         "author": {
-            "name": "Anna Nowak",
-            "bio": "Anna Nowak pisze o duchowości...",
-            "link": "https://example.com/anna-nowak"
+            "name": "brak",
+            "bio": "https://www.slowo.redemptor.pl",
+            "link": "https://www.slowo.redemptor.pl/pl/4660/8644/tajemnice-bolesne.html"
         }
     },
-    {
+    "3": {
         "id": 3,
-        "title": "Tajemnica Narodzenia",
-        "content": "Jezus rodzi się w Betlejem...",
+        "title": "Tajemnica Chwalebna: Zmartwychwstanie Pana Jezusa",
+        "content": "Jezus zwyciężył śmierć i powstał z grobu. To największa nadzieja dla każdego człowieka. Czy żyję jako człowiek zmartwychwstania? Czy wierzę, że Chrystus ma moc przemienić moje życie?",
         "author": {
-            "name": "Piotr Wiśniewski",
-            "bio": "Piotr Wiśniewski - kaznodzieja...",
-            "link": "https://example.com/piotr-wisniewski"
-        }
-    },
-    {
-        "id": 4,
-        "title": "Tajemnica Ofiarowania",
-        "content": "Maryja i Józef przynoszą Jezusa do świątyni...",
-        "author": {
-            "name": "Maria Kaczmarek",
-            "bio": "Maria Kaczmarek - autorka książek o wierze...",
-            "link": "https://example.com/maria-kaczmarek"
-        }
-    },
-    {
-        "id": 5,
-        "title": "Tajemnica Znalezienia",
-        "content": "Jezus zostaje odnaleziony w świątyni...",
-        "author": {
-            "name": "Tomasz Lis",
-            "bio": "Tomasz Lis - teolog i pisarz...",
-            "link": "https://example.com/tomasz-lis"
-        }
-    },
-    {
-        "id": 6,
-        "title": "Tajemnica Chrztu w Jordanie",
-        "content": "Jezus przyjmuje chrzest od Jana Chrzciciela...",
-        "author": {
-            "name": "Ewa Nowicka",
-            "bio": "Ewa Nowicka - autorka refleksji biblijnych...",
-            "link": "https://example.com/ewa-nowicka"
-        }
-    },
-    {
-        "id": 7,
-        "title": "Tajemnica Wesela w Kanie",
-        "content": "Jezus dokonuje pierwszego cudu...",
-        "author": {
-            "name": "Michał Baran",
-            "bio": "Michał Baran - kaznodzieja i rekolekcjonista...",
-            "link": "https://example.com/michal-baran"
-        }
-    },
-    {
-        "id": 8,
-        "title": "Tajemnica Głoszenia Królestwa",
-        "content": "Jezus naucza o Królestwie Bożym...",
-        "author": {
-            "name": "Barbara Leśniak",
-            "bio": "Barbara Leśniak - pisarka duchowa...",
-            "link": "https://example.com/barbara-lesniak"
-        }
-    },
-    {
-        "id": 9,
-        "title": "Tajemnica Przemienienia",
-        "content": "Jezus przemienia się na górze Tabor...",
-        "author": {
-            "name": "Andrzej Górski",
-            "bio": "Andrzej Górski - rekolekcjonista...",
-            "link": "https://example.com/andrzej-gorski"
-        }
-    },
-    {
-        "id": 10,
-        "title": "Tajemnica Ustanowienia Eucharystii",
-        "content": "Jezus ustanawia Eucharystię podczas Ostatniej Wieczerzy...",
-        "author": {
-            "name": "Zofia Malinowska",
-            "bio": "Zofia Malinowska - autorka duchowych esejów...",
-            "link": "https://example.com/zofia-malinowska"
+            "name": "brak",
+            "bio": "https://www.slowo.redemptor.pl",
+            "link": "https://www.slowo.redemptor.pl/pl/4660/8644/tajemnice-chwalebne.html"
         }
     }
-]
+}
