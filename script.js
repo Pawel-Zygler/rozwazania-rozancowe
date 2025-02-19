@@ -1,9 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
-    generateCalendar();
+    const calendar = document.getElementById("calendar");
+    
+    if (!calendar) {
+        console.error("Błąd: Nie znaleziono elementu #calendar.");
+        return;
+    }
+
+    generateCalendar(calendar);
 });
 
-function generateCalendar() {
-    const calendar = document.getElementById("calendar");
+function generateCalendar(calendar) {
     for (let i = 1; i <= 30; i++) {
         let day = document.createElement("div");
         day.classList.add("day");
@@ -18,17 +24,10 @@ function loadReflection(day) {
         .then(response => response.json())
         .then(data => {
             const reflection = data.find(item => item.id === day);
-            if (reflection) {
-                document.getElementById("reflection-content").innerText = reflection.title;
-                document.getElementById("author").innerText = reflection.author.name;
-                document.getElementById("bio").innerText = reflection.author.bio;
-                document.getElementById("link").href = reflection.author.link;
-            } else {
-                document.getElementById("reflection-content").innerText = "Brak rozważania na ten dzień.";
-                document.getElementById("author").innerText = "";
-                document.getElementById("bio").innerText = "";
-                document.getElementById("link").href = "#";
-            }
+            document.getElementById("reflection-content").innerText = reflection ? reflection.title : "Brak rozważania.";
+            document.getElementById("author").innerText = reflection ? reflection.author.name : "";
+            document.getElementById("bio").innerText = reflection ? reflection.author.bio : "";
+            document.getElementById("link").href = reflection ? reflection.author.link : "#";
         })
         .catch(error => console.error("Błąd ładowania JSON:", error));
 }
