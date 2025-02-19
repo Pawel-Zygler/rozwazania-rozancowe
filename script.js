@@ -13,20 +13,20 @@ document.addEventListener("DOMContentLoaded", function () {
     let reflections = {}; // Tu będą przechowywane dane z JSON
 
     // Funkcja do pobrania danych z JSON
-    function loadReflections() {
-        fetch("data.json")
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error("Błąd ładowania danych");
-                }
-                return response.json();
-            })
-            .then(data => {
-                reflections = data;
-                generateCalendar(); // Po załadowaniu danych generujemy kalendarz
-            })
-            .catch(error => console.error("Błąd: ", error));
+    function loadReflection(day) {
+    if (reflections[day]) {
+        reflectionContent.innerText = reflections[day].title + ": " + reflections[day].content;
+        authorElement.innerText = reflections[day].author.name; // Poprawne wyświetlanie imienia autora
+        bioElement.innerText = reflections[day].author.bio;
+        linkElement.href = reflections[day].author.link;
+        linkElement.style.display = "inline";
+    } else {
+        reflectionContent.innerText = "Brak rozważania na ten dzień.";
+        authorElement.innerText = "";
+        bioElement.innerText = "";
+        linkElement.style.display = "none";
     }
+}
 
     function generateCalendar() {
         calendarElement.innerHTML = "";
