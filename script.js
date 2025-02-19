@@ -1,56 +1,33 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const today = new Date();
-    const currentDay = today.getDate();
-    const daysInMonth = new Date(today.getFullYear(), today.getMonth() + 1, 0).getDate();
-    
-    const calendarTable = document.getElementById("calendarTable");
-    let row = document.createElement("tr");
-
-    for (let i = 1; i <= daysInMonth; i++) {
-        let cell = document.createElement("td");
-        cell.textContent = i;
-        
-        if (i === currentDay) {
-            cell.classList.add("today");
-        }
-
-        cell.addEventListener("click", () => loadReflection(i));
-        row.appendChild(cell);
-
-        if (i % 7 === 0 || i === daysInMonth) {
-            calendarTable.appendChild(row);
-            row = document.createElement("tr");
-        }
-    }
+document.addEventListener("DOMContentLoaded", function () {
+    generateCalendar();
 });
+
+function generateCalendar() {
+    const calendar = document.getElementById("calendar");
+    for (let i = 1; i <= 30; i++) {
+        let day = document.createElement("div");
+        day.classList.add("day");
+        day.innerText = i;
+        day.onclick = () => loadReflection(i);
+        calendar.appendChild(day);
+    }
+}
 
 function loadReflection(day) {
     fetch("data.json")
         .then(response => response.json())
         .then(data => {
-            let reflection = data.find(item => item.day === day);
+            const reflection = data.find(item => item.id === day);
             if (reflection) {
-                document.getElementById("reflection-title").innerText = reflection.title;
-                document.getElementById("reflection-content").innerText = reflection.content;
-                document.getElementById("reflection-author").innerText = "Autor: " + reflection.author;
-
-                let linksContainer = document.getElementById("reflection-links");
-                linksContainer.innerHTML = "";
-                if (reflection.links.length > 0) {
-                    reflection.links.forEach(link => {
-                        let a = document.createElement("a");
-                        a.href = link;
-                        a.innerText = "Zobacz więcej";
-                        a.target = "_blank";
-                        a.style.display = "block";
-                        linksContainer.appendChild(a);
-                    });
-                }
+                document.getElementById("reflection-content").innerText = reflection.title;
+                document.getElementById("author").innerText = reflection.author.name;
+                document.getElementById("bio").innerText = reflection.author.bio;
+                document.getElementById("link").href = reflection.author.link;
             } else {
-                document.getElementById("reflection-title").innerText = "Brak rozważania na ten dzień.";
-                document.getElementById("reflection-content").innerText = "";
-                document.getElementById("reflection-author").innerText = "";
-                document.getElementById("reflection-links").innerHTML = "";
+                document.getElementById("reflection-content").innerText = "Brak rozważania na ten dzień.";
+                document.getElementById("author").innerText = "";
+                document.getElementById("bio").innerText = "";
+                document.getElementById("link").href = "#";
             }
         })
         .catch(error => console.error("Błąd ładowania JSON:", error));
